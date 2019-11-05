@@ -46,9 +46,9 @@ from math import sin, cos
 import argparse
 
 
-basedir = 'C:/data/kitti/data_small/training' # windows
-basedir = '../data.2/object/training' # *nix
-basedir = 'data' # *nix
+basedir = '/media/datasets/KITTI/object_detection/training' # windows
+#basedir = '../data.2/object/training' # *nix
+#basedir = 'data' # *nix
 left_cam_rgb= 'image_2'
 label = 'label_2'
 velodyne = 'velodyne'
@@ -311,7 +311,7 @@ def pointCloudToBirdsEyeView(ax2, velo, bb3d):
   ax2.scatter(-bb3d[:,1],
              bb3d[:,0],
              c='red')
-  ax2.set_facecolor('xkcd:grey')
+  #ax2.set_facecolor('xkcd:grey')
   plt.colorbar(sc2)
 
 def main (frame='000008'):
